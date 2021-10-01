@@ -1,13 +1,12 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOptions">
+    <swiper :options="swiperOptions" v-if="showSwiper">
       <swiper-slide v-for="item of swiperList" :key="item.id">
         <img class="swiper-img" :src="item.imgUrl" />
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
   </div>
-  <!-- test -->
 </template>
 <script>
 export default {
@@ -24,34 +23,15 @@ export default {
         },
         //  配置项，让轮播图有小圆点
         pagination: { el: '.swiper-pagination', clickable: true }
-      },
-      swiperList: [
-        {
-          id: '0001',
-          imgUrl:
-            'https://gitee.com/Atiffiany/cloudimages/raw/master/Unclassified/TravelSwipperImage/1.jpg'
-        },
-        {
-          id: '0002',
-          imgUrl:
-            'https://gitee.com/Atiffiany/cloudimages/raw/master/Unclassified/TravelSwipperImage/2.jpg'
-        },
-        {
-          id: '0003',
-          imgUrl:
-            'https://gitee.com/Atiffiany/cloudimages/raw/master/Unclassified/TravelSwipperImage/3.jpg'
-        },
-        {
-          id: '0004',
-          imgUrl:
-            'https://gitee.com/Atiffiany/cloudimages/raw/master/Unclassified/TravelSwipperImage/4.jpg'
-        },
-        {
-          id: '0005',
-          imgUrl:
-            'https://gitee.com/Atiffiany/cloudimages/raw/master/Unclassified/TravelSwipperImage/5.jpg'
-        }
-      ]
+      }
+    }
+  },
+  props: {
+    swiperList: []
+  },
+  computed: {
+    showSwiper() {
+      return this.swiperList.length
     }
   }
 }
