@@ -90,6 +90,7 @@ export default {
   height 0
   padding-bottom 50%
 .icons
+  margin-top .1rem
   .icon
     position relative
     overflow hidden
