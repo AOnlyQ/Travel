@@ -41,7 +41,7 @@ export default {
     hotCities: Array,
     cities: Object
   },
-  mounted() {
+  updated() {
     this.scroll = new Bscroll(this.$refs.wrapper)
   }
 }
