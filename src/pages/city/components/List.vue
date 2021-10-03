@@ -65,7 +65,7 @@
 import Bscroll from 'better-scroll'
 export default {
   name: 'CityList',
-  mounted() {
+  updated() {
     this.scroll = new Bscroll(this.$refs.wrapper)
   }
 }
