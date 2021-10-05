@@ -1,27 +1,30 @@
 @font-face {
-  font-family: "iconfont"; /* Project id 2839535 */
-  src: url('./iconfont/iconfont.woff2?t=1632901807287') format('woff2'),
-       url('./iconfont/iconfont.woff?t=1632901807287') format('woff'),
-       url('./iconfont/iconfont.ttf?t=1632901807287') format('truetype');
+  font-family: 'iconfont'; /* Project id 2839535 */
+  src: url('./iconfont/iconfont.woff2?t=1633337495044') format('woff2'),
+    url('./iconfont/iconfont.woff?t=1633337495044') format('woff'),
+    url('./iconfont/iconfont.ttf?t=1633337495044') format('truetype');
 }
 
 .iconfont {
-  font-family: "iconfont" !important;
+  font-family: 'iconfont' !important;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-charutupian:before {
+  content: '\ec7f';
+}
+
 .icon-fanhui:before {
-  content: "\e624";
+  content: '\e624';
 }
 
 .icon-sousuo:before {
-  content: "\e632";
+  content: '\e632';
 }
 
 .icon-xiajiantou:before {
-  content: "\eb6d";
+  content: '\eb6d';
 }
-
