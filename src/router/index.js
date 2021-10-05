@@ -28,5 +28,8 @@ export default new Router({
       name: 'List',
       component: List
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })
