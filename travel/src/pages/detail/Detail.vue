@@ -35,7 +35,7 @@ export default {
   methods: {
     async getDetailData() {
       // 对象的解构赋值，将获取到的值data赋值给res
-      const { data: res } = await axios.get('/api/detail.json', {
+      const { data: res } = await axios.get('/detail', {
         params: {
           id: this.$route.params.id
         }

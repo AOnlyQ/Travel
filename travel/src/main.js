@@ -11,9 +11,9 @@ import 'styles/iconfont.css'
 import 'swiper/css/swiper.css'
 
 import fastClick from 'fastclick'
-
+import axios from 'axios'
 Vue.config.productionTip = false
-
+axios.defaults.baseURL = 'http://localhost:3000/'
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper /* { default options with global component } */)
 /* eslint-disable no-new */

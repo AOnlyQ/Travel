@@ -40,11 +40,12 @@ export default {
   },
   methods: {
     async getCityInfo() {
-      const { data: res } = await axios.get('/api/city.json')
+      const { data: res } = await axios.get('/city')
       if (res.ret && res.data) {
         this.hotCities = res.data.hotCities
         this.cities = res.data.cities
       }
+      console.log(res)
     },
     handleLetterChange(letter) {
       this.letter = letter
